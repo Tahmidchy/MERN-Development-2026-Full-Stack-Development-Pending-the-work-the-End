@@ -1,0 +1,2 @@
+# MERN-Development-2026-Full-Stack-Development-Pending-the-work-the-End
+I had been looking forward to the MERN Development training for a long time. I made many mistakes along the way, often doubting myself and missing out on valuable opportunities. I still find myself struggling with these issues, but I am now making a promise to myself to complete this course, InshaAllah, within the next 6 to 8 months.
