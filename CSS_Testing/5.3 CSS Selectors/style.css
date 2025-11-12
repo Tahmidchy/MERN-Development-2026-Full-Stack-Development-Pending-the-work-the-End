@@ -1,0 +1,33 @@
+ol {
+  margin-left: -40px;
+  margin-top: -20px;
+  list-style-position: inside;
+}
+
+/* Write your CSS below, don't change the rules above. */
+
+/* Center all the text in the body element 
+ body{
+  text-align: center;
+ }*/
+/* Set the CSS for all paragraph tags to "color: red" */
+ p{
+  color: red;
+ }
+
+ /* now all note class will have font size 20px */
+ .note{
+  font-size: 20px;
+ }
+/* in here color Green*/
+ #id-selector-demo {
+  color: green;
+}
+/* in here set color blue*/
+li[value="4"] {
+  color:blue;
+}
+/* in here task text align : center .*/
+*{
+  text-align: center;
+}
