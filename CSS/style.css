@@ -1,0 +1,210 @@
+/* Universal CSS */
+/* 1. Global Reset & Base Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* 2. Typography */
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+/* 3. Hero Section */
+
+.Hero_section {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+.hero_content h1 {
+    font-size: 3.5rem;
+}
+.hero_content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* 4. Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* 5 . About Section */
+
+#about {
+    padding: 4rem 0;
+    background: #fff;
+    text-align: center;
+}
+.About_section {
+    padding: 80px 0;
+}
+.About_section h3 {
+    margin : 1rem;
+}
+.About_section p {
+    max-width: 700px;
+    margin: 1rem auto;
+    line-height: 1.6;
+    color: #666;
+}
+.About_section ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1rem;
+}
+.About_section li {
+    background: #e9ecef;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* 6. Projects Section (Grid) */
+
+.project_section{
+    padding: 80px 0;
+    background: #f4f4f4;
+}
+.project_list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.project_card {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.project_card:hover {
+    transform: translateY(-5px);
+}
+.project_card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.project_card h3, .project_card p {
+    padding: 15px;
+}
+
+/* 7. Contact Section (Flexbox)*/
+.Contact_section {
+    padding: 80px 0;
+    background: #fff;
+}
+.Contact_section .contact_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+.contact_form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+.contact_form input, .contact_form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.contact_form button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+.contact_form button:hover {
+    background-color: #218838;
+}
+
+/* 8. Footer */
+.Footer_section {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+.Footer_section p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .hero_content h1 {
+        font-size: 2.5rem;
+    }
+    .hero_content p {
+        font-size: 1rem;
+    }
+    .About_section h3 {
+        font-size: 1.5rem;
+    }
+    .project_list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero_content h1 {
+        font-size: 2rem;
+    }
+    .About_section h3 {
+        font-size: 1.2rem;
+    }
+}
