@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> This is Personal Website </title>
+    <!-- Google Fonts Link -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <!-- Header Section Start  -->
+     <!-- Hero Section -->
+      <header id="hero" class="Hero_section">
+        <div class="container hero_container">
+            <div class="hero_content">
+                <h1> Welcome to My Personal Website </h1>
+                <p> This is a simple personal website created using the MERN stack. Explore my projects, skills, and contact information. </p>
+                <a href="#about" class="btn"> About Me </a>
+            </div>
+        </div>
+      </header>
+
+     <!-- Header Section End -->
+
+      <!-- About Section Start -->
+        <section id="about" class="About_section">
+            <div class="container about_container">
+                <h2> About Me </h2>
+                <p> Hello! I'm Tahmid Chowdhury, a passionate developer with experience in building web applications using the MERN stack. I love creating user-friendly and efficient solutions. </p>
+                <h3> Skills </h3>
+                <ul>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React.js</li>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>MongoDB</li>
+                    <li>HTML5 & CSS3</li>
+                </ul>
+            </div>
+        </section>    
+        <!-- About Section End -->
+         
+        <!-- Project Section Start -->
+        <section id="projects" class="Projects_section">
+            <div class="container projects_container">
+                <h2> My Projects </h2>
+                <div class="project_list">
+                    <div class="project_card">
+                        <h3> Real Estated Client </h3>
+                        <img src="./image/avi-waxman-f9qZuKoZYoY-unsplash.jpg" alt=" Real Estate Client Project Image " width="500" height="400">
+                        <p> This Project Build for Canadian Real Estate Company </p>
+                    </div>
+                    <div class="project_card">
+                        <h3> Oil Refinery Company </h3>
+                        <img src="./image/pilmo-kang-H72SCCTZPE8-unsplash.jpg" alt=" Oil Refinery Company Project Image " width="500" height="400">
+                        <p> This Project Build for South African Oil Refinery Company  </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Project Section End -->
+
+        <!-- Contact Section Start -->
+        <section id="contact" class="Contact_section">
+            <div class="container contact_container">
+                <h2> Contact Me </h2>
+                <form action="#" method="post" class="contact_form">
+                    <label for="name"> Name: </label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email"> Email: </label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message"> Message: </label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit" class="btn"> Send Message </button>
+                </form>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+         <!-- Footer Section Start -->
+        <footer class="Footer_section">
+            <div class="container footer_container">
+                <p> &copy; 2025 Tahmid Chowdhury. All rights reserved. </p>
+            </div>
+        </footer>
+        <!-- Footer Section End -->
+</body>
+</html>
