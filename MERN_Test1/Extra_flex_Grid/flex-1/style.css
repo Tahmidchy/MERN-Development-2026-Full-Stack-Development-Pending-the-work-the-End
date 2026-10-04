@@ -1,0 +1,83 @@
+*, *::before,
+ *::after{
+    box-sizing: border-box;
+}
+
+
+.block-test{
+    background-color:lightgreen;
+    width: 300px;
+   /* padding-block:  20px 30px; */
+  /* padding-inline: 40px 50px; */
+  padding: 10px;
+  border: 10px solid blueviolet;
+  margin: 20px 10px 30px;
+}
+.block-test2{
+    background-color:lightcoral;
+    width: 300px;
+    padding: 10px;
+    border: 10px solid blueviolet;
+    margin: 20px 10px 30px;
+}
+.block-test3{
+    background-color:lightcyan;
+    width: 300px;
+    padding: 10px;
+    border: 10px solid blueviolet;
+    margin: 20px 10px 30px;
+}
+strong {
+    background-color: lightblue;
+    height: 250px;
+    width: 300px;
+    display: block;
+    padding-inline: 40px;
+}
+.block-test5{
+    background-color:lightpink;
+    width: 300px;
+    padding: 10px;
+    border: 10px solid blueviolet;
+    margin: 20px 10px 30px;
+}
+.block-test5 h1{
+   padding: 20px;
+}
+.button{
+    text-decoration: none;
+    background-color: navy;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.static-position{
+    background-color: #111;
+    color: white;
+    padding: 10px;
+}
+.block-test1{
+    position: absolute;
+    width: 200px; 
+    height: 100px;
+    background-color: crimson;
+    top: 50px;
+    z-index: 1;
+    /*right: 50px; 
+    bottom: 50px; */
+    /*inset: 50px 20px 60px 80px; /* top right bottom left */
+}
+.paresnts{
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-color: lightblue;
+}
+.block-test8{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    z-index: -1;
+}

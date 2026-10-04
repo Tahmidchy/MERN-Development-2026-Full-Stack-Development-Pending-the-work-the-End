@@ -1,0 +1,378 @@
+/* Root Variables for Color Scheme */
+
+:root{
+    --primary-pink:#ff4081; /* Primary Pink Color button/bag color*/
+    --primary-orange:#ffa500; /* Primary Orange Color button/bag color*/
+    --primary-blue: #4032c9; /* Shoes color*/
+    --bg-light-pink: #fceae8; /* Light Pink Background Color*/
+    --text-dark: #232323; /* Dark Text Color*/
+    --text-grey: #6c757d; /* Grey Text Color*/
+}
+
+/* Universal Css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    
+}
+
+/* Body Css */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: var(--text-dark);
+    
+}
+/* --- Utility Class --- */
+.container {
+    max-width: 1100px; /* Standard laptop width */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* --- Header Section --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.logo img {
+    height: 40px;
+}
+
+.menu-icon img {
+    height: 24px;
+    cursor: pointer;
+}
+
+/* --- End Header Section --- */
+
+/* --- Hero Section --- */
+.hero-section {
+    background-color: var(--bg-light-pink);
+    border-radius: 10px;
+    margin: 0 15px 50px 15px;   
+}
+/* Specific container constraint for hero alignment */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 50px;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    color: var(--text-grey);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.hero-text .price {
+    font-size: 36px;
+    color: var(--primary-pink);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.btn-hero {
+    background-color: var(--primary-pink);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.btn-hero:hover {
+    background-color: #e73370;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* --- End Hero Section --- */
+
+/* --- Category Section --- */
+.categories-section {
+    margin-bottom: 80px;
+}
+
+.category-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.cat-card {
+    flex: 1;
+    border-radius: 10px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.cat-card:hover {
+    transform: translateY(-5px);
+}
+
+.cat-card h1 {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.cat-card img {
+    width: 80px;
+    height: auto;
+}
+
+.cat-watch { background-color: var(--primary-orange); }
+.cat-bag { background-color: var(--primary-pink); }
+.cat-shoes { background-color: var(--primary-blue); }
+
+/*--- End Category Section --- */
+
+/*--- Shoes and Bag Section Start ---*/
+
+.products-section {
+    margin-bottom: 80px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 13px;
+    color: var(--text-grey);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.product-card .price {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.btn-buy {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.btn-buy:hover {
+    opacity: 0.8;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ---- Shoes and Beg Section End ---- */
+
+/* --- Newsletter Section --- */
+.newsletter-section {
+    background-color: var(--bg-light-pink);
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.newsletter-container {
+    text-align: center;
+}
+
+.newsletter-container h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.newsletter-container p {
+    color: var(--text-grey);
+    margin-bottom: 30px;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subscribe-form input {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    outline: none;
+}
+
+.subscribe-form button {
+    background-color: var(--primary-pink);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* --- End Section --- */
+
+/* =========================================
+   RESPONSIVE BREAKPOINTS
+   ========================================= */
+
+/* 1. Laptop Device (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .hero-text h1 {
+        font-size: 40px; /* Reduced font size */
+    }
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* 2. Tablet Device (max-width: 992px) */
+@media (max-width: 992px) {
+    /* Hero: Stack content */
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    
+    .hero-text {
+        padding-right: 0;
+        margin-top: 30px;
+    }
+
+    .hero-image {
+        justify-content: center;
+    }
+
+    /* Categories: Wrap cards */
+    .category-grid {
+        flex-wrap: wrap;
+    }
+    
+    /* If wrapping, we might want them to take full width or 50% */
+    .cat-card {
+        min-width: 45%; 
+        margin-bottom: 20px;
+    }
+
+    /* Products: Grid becomes 2 columns instead of 3 */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 3. Mobile Device (max-width: 640px) */
+@media (max-width: 640px) {
+    /* Hero font further reduction */
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    /* Categories: Single Column, Full Width */
+    .category-grid {
+        flex-direction: column;
+    }
+    
+    .cat-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Products: Single Column */
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Newsletter: Input and Button Stack */
+    .subscribe-form {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .subscribe-form input {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .subscribe-form button {
+        width: 100%;
+        max-width: 300px;
+    }
+}

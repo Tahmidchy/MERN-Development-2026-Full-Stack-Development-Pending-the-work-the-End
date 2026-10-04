@@ -1,0 +1,28 @@
+/* Image size height: 200px, weight: 200px */
+img {
+  height: 200px;
+  width: 200px;
+}
+/* Font weight normal for class color-title */
+.color-title {
+  font-weight: normal;
+}
+/* Text color for each id corresponding to color names */
+#red {
+  color: red;
+}
+#blue {
+  color: blue;
+}
+#orange {
+  color: orange;
+}
+#green {
+  color: green;
+}
+#yellow {
+  color: yellow;
+}
+#orange{
+  color: orange;
+}

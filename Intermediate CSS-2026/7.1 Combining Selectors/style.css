@@ -1,0 +1,22 @@
+/* Write your code here: */
+
+/* Group CSS */
+h1,h2{
+    color: blueviolet;
+}
+/* Child CSS */
+.box > p{
+    color: firebrick;
+}
+/* Descendent CSS */
+.box li{
+    color: blue;
+}
+/* Chained CSS */
+li.done{
+    color: seagreen;
+}
+/* Multiple Combiners CSS */
+ul p.done{
+    font-size: 0.5rem;
+}
