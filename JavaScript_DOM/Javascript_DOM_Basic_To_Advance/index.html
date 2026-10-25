@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Basic to Advance </title>
+</head>
+<body>
+    <!-- 
+TODO: TOPIC 1: DOM Tree & Window vs Document Architecture
+💡 গভীর ব্যাখ্যা (Deep Concept):
+আমরা যখন ব্রাউজারে একটি ওয়েবপেজ রান করি, তখন ব্রাউজার ইঞ্জিন ২টি গ্লোবাল অবজেক্ট তৈরি করে:
+
+window Object: এটি ব্রাউজারের একদম মূল (Root) গ্লোবাল অবজেক্ট। ব্রাউজারের ট্যাব, উইন্ডো সাইজ, লোকাল স্টোরেজ, টাইমার (setTimeout)—সবকিছু window-এর অধীনে থাকে।
+
+document Object: এটি window-এর একটি প্রপার্টি (window.document)। এটি তোমার লেখা HTML ফাইলের একটি ডিজিটাল রিপ্রেজেন্টেশন (Tree Structure)।
+
+
+window (Global Object)
+                          │
+       ┌──────────────────┼──────────────────┐
+    document           location           localStorage
+       │
+    <html>
+   ┌───┴───┐
+<head>   <body>
+    
+    -->
+
+    <!--
+    TODO: TOPIC 2: Element Selection (Selecting Nodes) গভীর ব্যাখ্যা:
+HTML থেকে কোনো এলিমেন্ট ধরা বা সিলেক্ট করার ২টি ধরণ আছে:
+
+querySelector('#id') / querySelectorAll('.class') [স্ট্যান্ডার্ড ও মডার্ন approach]:
+
+এটি CSS সেলেক্টর ব্যবহার করে এলিমেন্ট ধরে।
+
+querySelectorAll একটি NodeList ফেরত দেয়। NodeList হলো স্ট্যাটিক (Static)—অর্থাৎ পরবর্তীতে DOM-এ নতুন এলিমেন্ট যুক্ত হলেও NodeList-এর সাইজ নিজে নিজে বাড়ে না।
+
+getElementsByClassName() / getElementsByTagName() [পুরাতন approach]:
+
+এটি একটি HTMLCollection ফেরত দেয়।
+
+HTMLCollection হলো Live—অর্থাৎ পরবর্তীতে DOM-এ কোনো এলিমেন্ট যোগ বা বাদ দিলে এটি অটোমেটিক আপডেট হয়ে যায়।
+    -->
+
+    <!-- HTML :Element Selection-->
+    <h1 id="title">Micro POS</h1>
+      <button class="btn">Item 1</button>
+       <button class="btn">Item 2</button>
+    <div id="container"></div>
+
+
+    <!--
+   TODO: TOPIC 3: Text & Style Manipulation
+💡 গভীর ব্যাখ্যা:
+এলিমেন্টের ভেতর টেক্সট পরিবর্তন করার সময় ৩টি বিষয় বুঝতে হয়:
+
+innerText: ব্রাউজার স্ক্রিনে যা দৃশ্যমান (Visible) শুধু সেই টেক্সট নেয়/দেয় (CSS display: none থাকলে তা বাদ দেয়)।
+
+textContent: দৃশ্যমান হোক বা অদৃশ্য—HTML-এর ভেতরের সব টেক্সট হুবহু স্পেসসহ নিয়ে নেয়। (এটি innerText-এর চেয়ে ফাস্ট)।
+
+innerHTML: টেক্সটের পাশাপাশি ভেতরে নতুন HTML ট্যাগ বসাতে ব্যবহার হয়। (সতর্কতা: ইউজার ইনপুট সরাসরি innerHTML-এ বসালে XSS Attack হওয়ার সম্ভাবনা থাকে)।
+
+স্টাইলিংয়ের ক্ষেত্রে সরাসরি style.color না লিখে classList (add, remove, toggle) ব্যবহার করা হলো ক্লিন কোডের নিয়ম।
+    -->
+
+    <!-- HTML -->
+<p id="msg">Hello <span style="display:none;">Secret</span> World!</p>
+<button id="toggle-btn">Toggle Active Class</button>
+
+<!-- 
+  TODO: TOPIC 4: Element Traversal (DOM-এর ভেতর যাতায়াত)
+💡 গভীর ব্যাখ্যা:
+একটি নির্দিষ্ট এলিমেন্টকে কেন্দ্র করে তার আশেপাশে থাকা অন্যান্য এলিমেন্টগুলোকে খুঁজে বের করাই হলো Traversal।
+
+parentElement: ওই এলিমেন্টের ওপরের মূল প্যারেন্টকে ধরে।
+
+children: ওই এলিমেন্টের ভেতরে থাকা সব চাইল্ড এলিমেন্টকে ধরে।
+
+nextElementSibling / previousElementSibling: তার পাশাপাশি ডানে বা বামে থাকা এলিমেন্টকে ধরে।
+-->
+
+<!-- HTML Element Traversal-->
+
+<ul id="cart">
+    <li class="item"> Burger </li>
+    <li class="item">Fries</li>
+    <li class="item">Drink</li>
+</ul>
+
+
+<!--
+  TODO: TOPIC 5: Dataset (data-* Attributes)
+💡 গভীর ব্যাখ্যা:
+HTML5-এ কাস্টম ডেটা স্টোর করার সবচেয়ে চমৎকার ফিচার হলো data-* এট্রিবিউট। জাভাস্ক্রিপ্ট ফ্রেমওয়ার্ক বা ডেটাবেজ ছাড়া কোনো ফ্রন্টএন্ড এলিমেন্টে ID, Price, Category ইত্যাদি ইনফরমেশন সেভ করে রাখার জন্য এটি ব্যবহৃত হয়। জাভাস্ক্রিপ্টে এটি element.dataset অবজেক্ট দিয়ে পড়া ও লেখা যায়।
+-->
+
+<!-- HTML Dataset-->
+
+<!-- এভাবে data-category এবং data-price থাকতে হবে -->
+<button id="food-btn" data-category="fastfood" data-price="150">
+  Burger
+</button>
+
+
+<!--
+TODO: TOPIC 6: Advanced Event Handling (Bubbling, Capturing & Delegation)
+💡 গভীর ব্যাখ্যা (গেম-চেঞ্জার কনসেপ্ট):
+ব্রাউজারে যখন কোনো এলিমেন্টে ক্লিক হয়, তখন ইভেন্টটি ৩টি ধাপে ঘটে:
+
+Capturing Phase: একদম ওপরের window থেকে নিচে নামতে নামতে টার্গেট এলিমেন্টে যায়।
+
+Target Phase: আসল ক্লিক করা এলিমেন্টে পৌঁছায়।
+
+Bubbling Phase: টার্গেট এলিমেন্ট থেকে আবার বুদ্বুদের মতো ওপরে window পর্যন্ত উঠে যায়।
+
+Event Delegation (১০ গুণ ফাস্ট কোডিংয়ের সিক্রেট):
+যদি তোমার ১০০টি বাটন থাকে, ১০০টিতে আলাদা addEventListener বসালে পিসির মেমরি নষ্ট হবে।
+তাই ইভেন্ট বাবলিং (Bubbling)-এর সুযোগ নিয়ে সব বাটনের মূল প্যারেন্ট (Parent Container)-এ মাত্র ১টি Event Listener বসিয়ে সব বাটন হ্যান্ডেল করাকেই বলে Event Delegation।
+-->
+
+<!-- HTML Advance Event -->
+
+<div id="menu-grid">
+  <button class="add-btn" data-name="Burger">Burger</button>
+  <button class="add-btn" data-name="Pizza">Pizza</button>
+  <button class="add-btn" data-name="Fries">Fries</button>
+</div>
+
+
+<!--
+TODO: TOPIC 7: High-Performance DOM & Reflow Optimization (DocumentFragment)
+💡 গভীর ব্যাখ্যা:
+ব্রাউজারে যখনই নতুন কোনো এলিমেন্ট যোগ হয়, ব্রাউজার পুরো পেজের সাইজ ও পজিশন আবার রি-ক্যালকুলেট করে। এটাকে বলে Reflow।
+
+তুমি যদি একটা for লুপের ভেতর ১০০ বার appendChild() করো, তবে ১০০ বার Reflow হবে এবং পেজ স্লো হয়ে যাবে।
+
+সমাধান হলো DocumentFragment। এটি একটি ভার্চুয়াল মেমরি কনটেইনার। লুপ চালিয়ে ১০০টা এলিমেন্ট আগে মেমরিতে সাজাবে, তারপর মাত্র ১ বার আসল DOM-এ পুশ করবে!
+
+
+-->
+
+
+
+<!-- HTML High-Performance DOM & Reflow Optimization -->
+
+<ul id="item-list"></ul>
+
+
+<!-- 
+
+TODO: TOPIC 8: Custom Events (নিজের ইভেন্ট নিজে বানানো)
+💡 গভীর ব্যাখ্যা:
+ব্রাউজারের বিল্ট-ইন ইভেন্ট যেমন click, keyup-এর বাইরেও তুমি চাইলে তোমার অ্যাপের জন্য নিজের কাস্টম ইভেন্ট বানাতে পারো। যেমন: কার্টে কোনো আইটেম যোগ হলে cartUpdated নামের একটি কাস্টম ইভেন্ট ফায়ার হবে, আর অন্য একটি মডিউল সেই ইভেন্ট শুনে টোটাল বিল আপডেট করে দেবে।
+-->
+
+
+<!--
+TODO: TOPIC 9: DOM Observers (MutationObserver)
+💡 গভীর ব্যাখ্যা:
+যদি ব্যাকগ্রাউন্ড থেকে বা অন্য কোনো স্ক্রিপ্ট দ্বারা তোমার DOM-এর কোনো পরিবর্তন ঘটে (যেমন নতুন কোনো ট্যাগ যুক্ত হওয়া বা টেক্সট বদলানো), তখন ব্রাউজারকে গার্ড হিসেবে দাঁড় করিয়ে রাখার জন্য MutationObserver ব্যবহার করা হয়।
+-->
+
+<!-- HTML -->
+<div id="status-box">Initial Status</div>
+
+
+    <script src="./index1.js"></script>
+</body>
+</html>
