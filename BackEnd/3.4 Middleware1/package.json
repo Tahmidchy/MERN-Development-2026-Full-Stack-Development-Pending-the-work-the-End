@@ -1,0 +1,21 @@
+{
+  "name": "3.3-middleware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Tahmid Chowdhury",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1-security.1",
+    "body-parser": "^1.20.9",
+    "express": "^4.22.3",
+    "g": "^2.0.1",
+    "morgan": "^1.12.1",
+    "nodemon": "^3.1.11"
+  }
+}
